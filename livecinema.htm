@@ -1,43 +1,44 @@
-<slides></slides>
-
-<!-- <cues id="cues">10,30,60,90,120</cues>
-<video><source src="mash.mp4" type="video/mp4"></source></video> -->
+<elements></elements>
 
 <style>
 body {
-    margin: 0;
-    background-color: #000;
+  margin: 0;
+  background-color: #000;
 }
 video, img {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    transform: translateX(-50%) translateY(-50%);
-    display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translateX(-50%) translateY(-50%);
+  display: none;
 }
 #indicators {
-    color: #fff;
-    font-weight: bold;
-    font-family: monospace;
-    background-color: black;
-    position: fixed;
-    top: 5%;
-    left: 5%;
-    padding: 10px;
-    width: auto;
-    height: auto;
+  color: #fff;
+  font-weight: bold;
+  font-family: monospace;
+  background-color: black;
+  position: fixed;
+  top: 5%;
+  left: 5%;
+  padding: 10px;
+  width: auto;
+  height: auto;
+}
 </style>
 
 <div id="indicators">
-    Playing: <indicator id="status"></indicator><br>
-    Current Cue: <indicator id="cue"></indicator><br>
-    Total Cues: <indicator id="cuecount"></indicator><br>
-    Player Time: <indicator id="time"></indicator><br>
-    Current Slide Length: <indicator id="duration"></indicator><br>
+  Status: <indicator id="status"></indicator><br>
+  Current Transition: <indicator id="transition"></indicator><br>
+  Total Transitions: <indicator id="transitioncount"></indicator><br><br>
+
+  Current Visual ID: <indicator id="currentvisual"></indicator><br>
+  Video Sound: <indicator id="visualaudio"></indicator><br><br>
+
+  Current Audio ID: <indicator id="currentaudio"></indicator><br>
 </div>
 <script src="storyboard.js"></script>
 <script src="livecinema.js"></script>
