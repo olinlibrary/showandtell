@@ -1,0 +1,20 @@
+var storyboard = [
+	{type: "image", file: "everything-but-books.jpg"},
+	{type: "video", file: "drive-up.mp4"},
+	{type: "video", file: "360.mp4"},
+	{type: "video", file: "atrium.mp4"},
+	{type: "video", file: "leaving-emerald-cove.mp4"},
+	{type: "video", file: "utility-wall-2.mp4"},
+	{type: "video", file: "utility-wall-3.mp4"},
+	{type: "video", file: "cadding.mp4"},
+	{type: "video", file: "bracket-fab-short.mp4"},
+	{type: "video", file: "faculty-retreat.mp4"},
+	{type: "video", file: "turntable.mp4"},
+	{type: "video", file: "animal-craze.mp4"},
+	{type: "video", file: "animal-craze2.mp4"},
+	{type: "video", file: "hacking-library-typewriter.mp4"},
+	{type: "video", file: "music.mp4"},
+	{type: "video", file: "devynn.mp4"},
+	{type: "video", file: "food-justice.mp4"},
+	{type: "video", file: "copernican.mp4"}
+];
