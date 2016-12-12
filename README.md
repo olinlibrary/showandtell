@@ -11,6 +11,12 @@ Live Cinema is a HTML & Javascript application designed to run in the web browse
 * _Up Arrow_ - Rewind all media to the beginning
 * _Space Bar_ - Play / Pause
 
+### Building a Presentation
+
+As Live Cinema is an offline app, you must have all of your media locally. 
+
+Everything you need to configure is in the `storyboard.js` file.
+
 ### Supported Media
 
 ```
@@ -31,14 +37,14 @@ The storyboard in live cinema is based on a series of transitions, as a list of 
 
 #### Example Transitions
 
-Switch the visual to the video clip `atrium.mp4`. Do nothing to the current audio track.
+Switch the visual to the video clip `atrium.mp4` with a 1000 ms (1 sec) fade. Do nothing to the current audio track.
 ```
-visual: {type: "video", file: "atrium.mp4"}
+visual: {type: "video", file: "atrium.mp4", fade: 1000}
 ```
 
-Switch the visual to the video clip `atrium.mp4` and play the audio from the video clip. Do nothing to the current audio track.
+Switch the visual to the video clip `atrium.mp4` and play the audio from the video clip at 75% volume. Do nothing to the current audio track.
 ```
-visual: {type: "video", file: "atrium.mp4", audio: true}
+visual: {type: "video", file: "atrium.mp4", volume: 0.75}
 ```
 
 Switch the visual to the image `atrium.jpg`. Do nothing to the current audio track.
@@ -56,9 +62,9 @@ Hide the current visual. Do nothing to the current audio track.
 visual: false
 ```
 
-Stop the current audio clip. Do nothing to the current visual.
+Fade out and stop the current audio clip over 5 sec. Do nothing to the current visual.
 ```
-audio: false
+audio: {file: false, fade: 5000}
 ```
 
 #### Combining Audio & Video Transitions
@@ -69,9 +75,9 @@ visual: {type: "video", file: "360.mp4"},
 audio: {file: "lcd.mp3"}
 ```
 
-Switch the visual to the video `360.mp4`, play the audio from the video clip & stop the current audio clip.
+Switch the visual to the video `360.mp4`, play the audio from the video clip at 100% volume & stop the current audio clip.
 ```
-visual: {type: "video", file: "360.mp4", audio: true},
+visual: {type: "video", file: "360.mp4", volume: 1.0},
 audio: false
 ```
 
@@ -88,9 +94,9 @@ An example storyboard.js file is as follows:
 ```
 var transitions = [
 	{
-		visual: {type: "image", file: "everything-but-books.jpg"}
+		visual: {type: "image", file: "everything-but-books.jpg", fade: 5000}
 	},{
-		visual: {type: "video", file: "drive-up.mp4", audio: true}
+		visual: {type: "video", file: "drive-up.mp4", volume: 0.5}
 	},{
 		visual: {type: "video", file: "360.mp4"},
 		audio: {file: "lcd-dyc.mp3"}
@@ -104,7 +110,7 @@ var transitions = [
 	},{
 		audio: {file: "lcd-icc.mp3"}
 	},{
-		audio: false
+		audio: {file: false, fade: 5000}
 	},{
 		visual: {type: "video", file: "utility-wall-2.mp4"}
 	},{
