@@ -186,10 +186,7 @@ function loadMedia(){
       file = value.visual.file;
 
       if(value.visual.type == "video"){
-        // if(value.visual.audio == true)
-          $('elements').append('<video id='+idkey+' src="media/mp4/'+file+'"></video>');
-        // else
-          // $('elements').append('<video muted id='+idkey+' src="media/mp4/'+file+'"></video>');
+        $('elements').append('<video id='+idkey+' src="media/mp4/'+file+'" loop></video>');
         lastvisual.volume = value.visual.volume ? value.visual.volume : 0.0;
         lastvisual.id = idkey++;
       }
