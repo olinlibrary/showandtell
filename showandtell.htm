@@ -1,0 +1,51 @@
+Loading...
+
+<style>
+  body {
+    margin: 0;
+    color: #000;
+    font-family: monospace;
+    font-weight: bold;
+  }
+  body.ready {
+    background-color: #000;
+  }
+  video, img {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  #indicators {
+    color: #fff;
+    background-color: black;
+    position: fixed;
+    top: 5%;
+    left: 5%;
+    padding: 10px;
+    width: auto;
+    height: auto;
+    z-index: 100;
+  }
+</style>
+
+<div id="indicators">
+  Load Status: <indicator id="load"></indicator><br>
+  Transition Status: <indicator id="transitionstatus"></indicator><br>
+  Play Status: <indicator id="status"></indicator><br><br>
+
+  Current Transition: <indicator id="transition"></indicator><br>
+  Total Transitions: <indicator id="transitioncount"></indicator><br>
+  Last Transition: <indicator id="transitiondirection"></indicator><br><br>
+
+  <timeindicators></timeindicators>
+</div>
+
+<script src="vendor/jquery.js"></script>
+<script src="vendor/jquery.easing.js"></script>
+<script src="showandtell.js"></script>
+<script src="storyboard.js"></script>
