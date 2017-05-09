@@ -210,6 +210,17 @@
     this.reset();
   }
 
+  function Markdown(params){ Media.call(this, params);}
+  Markdown.prototype = Object.create(Media.prototype);
+  Markdown.prototype.loadMedia = function(){
+    jQuery.get('media/'+this.file, (data) => {
+        var converter = new showdown.Converter(),
+        html = converter.makeHtml(data);
+        this.dom = $('<div class=md>'+html+'</div>').appendTo('body');
+        this.reset();
+    });
+  }
+
   function Audio(params){ Video.call(this, params);}
   Audio.prototype = Object.create(Video.prototype);
   Audio.prototype.loadMedia = function(){

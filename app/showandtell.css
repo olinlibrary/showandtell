@@ -1,8 +1,8 @@
 body {
   margin: 0;
   color: #000;
-  font-family: monospace;
   font-weight: bold;
+  font-family: sans-serif;
 }
 body.ready {
   background-color: #000;
@@ -18,13 +18,25 @@ video, img {
   transform: translateX(-50%) translateY(-50%);
 }
 #indicators {
+  font-family: monospace;
   color: #fff;
   background-color: black;
   position: fixed;
   top: 5%;
-  left: 5%;
+  right: 5%;
   padding: 10px;
   width: auto;
   height: auto;
   z-index: 100;
+}
+.md {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10%;
+  font-size:200%;
+  color: white;
 }

@@ -9,10 +9,12 @@ dp = new Video({file: 'dp.mp4'});
 ski = new Video({file: 'ski.mp4'});
 slide = new Video({file: 'slide.mp4'});
 smetana = new Audio({file: 'smetana.mp3'});
+md = new Markdown({file: 'markdown.md'});
 
 transitions.push(function(){
 	mash.in(1000);
 	smetana.in();
+	md.in(500);
 });
 
 transitions.push(function(){
@@ -29,6 +31,7 @@ transitions.push(function(){
 transitions.push(function(){
 	slide.out(1000);
 	image.in(1000);
+	md.out();
 });
 
 transitions.push(function(){
