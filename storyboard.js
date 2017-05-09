@@ -1,5 +1,5 @@
 // Global Settings
-var indicators = true;
+var indicators = false;
 
 // Initialize Media (Last items initialized are on top)
 image = new Image({file: '078-0045.jpg'});
@@ -23,9 +23,9 @@ transitions.push(function(){
 });
 
 transitions.push(function(){
-	engine.out(0);
-	slide.in(0);
-	smetana.out(10000);
+	engine.out();
+	slide.in();
+	smetana.out();
 });
 
 transitions.push(function(){

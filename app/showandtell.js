@@ -1,5 +1,7 @@
 // Todo
-// - More Media Types (Iframe, Text)
+// - Debug rough transitions, pause/play issues
+// - More Media Types (Iframe)
+// - Document changes
 
 ////////////////////////////
 // Handle Transitions
@@ -23,7 +25,8 @@
     if(!loaded)
       return console.log('  ERROR: Media Loading');
 
-    playing = true;
+    if(!playing)
+      togglePlayPause();
 
     if(reverse){
       if(currentslide >= 0){
@@ -53,6 +56,7 @@
 
   function togglePlayPause(){
     playing = !playing;
+    
     for (var i in media){
       if(!playing)
         media[i].pause();
@@ -165,7 +169,6 @@
         transitionlock++;
         this.play();
         this.visible = true;
-        console.log(this);
       },
       done: () => {
         transitionlock--;
