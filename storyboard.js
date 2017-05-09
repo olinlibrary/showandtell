@@ -3,7 +3,7 @@ var indicators = true;
 
 // Initialize Media (Last items initialized are on top)
 image = new Image({file: '078-0045.jpg'});
-mash = new Video({file: 'mash.mp4', volume: 1.0});
+mash = new Video({file: 'mash.mp4', volume: 0.01});
 engine = new Video({file: 'engine.mp4', startTime: 1.0});
 dp = new Video({file: 'dp.mp4'});
 ski = new Video({file: 'ski.mp4'});
